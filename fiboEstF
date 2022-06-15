@@ -1,0 +1,31 @@
+// Más información acerca de F# en http://fsharp.net
+// Vea el proyecto "Tutorial de F#" para obtener más ayuda.
+
+open System
+let suma x y=x+y
+
+
+[<EntryPoint>]
+let main argv = 
+    //printfn "%A" argv
+    Console.WriteLine("INgrese número de términos: ")
+    let n=Convert.ToInt32(Console.ReadLine())
+
+    let mutable a=0
+    let mutable b=1
+
+    for i=1 to n do
+        if i=1 then
+            printfn "%d" a
+        elif i=2 then
+            printfn "%d" b
+        else
+            printfn ""
+            let c=a+b
+            printfn "%d" c
+            a<-b
+            b<-c
+            printfn " "
+    
+    let tecla=Console.ReadKey()
+    0 // devolver un código de salida entero

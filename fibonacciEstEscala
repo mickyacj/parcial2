@@ -1,0 +1,34 @@
+object FibonacciScala{
+
+	def fibo(n:Int):Unit={
+		var x=0
+		var y=1
+		var z=0
+		for(i<- 1 to n)
+		{
+			if( i == 1 )
+			{
+				println(x)
+			}
+			else if( i == 2 )
+			{
+				println(y)
+			} 
+			   
+			else
+			{
+				z=y+x
+				println(z)
+				x=y
+				y=z
+			}
+		}			
+	}
+	def main(args:Array[String]):Unit={
+
+		println("Escribe un valor para n:")
+		val n=scala.io.StdIn.readInt()
+		println("Los primeros "+n+" números fibonacci son:")
+		fibo(n)
+	}
+}

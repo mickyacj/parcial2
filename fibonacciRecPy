@@ -1,0 +1,20 @@
+"""
+Created on Wed Jun 15 16:17:47 2022
+
+@author: micky
+"""
+
+def fibonacci(n):
+	if n<=1:
+		return n
+	else:
+		return(fibonacci(n-1) + fibonacci(n-2))
+
+n = int(input('Ingresar número de términos n: '))
+
+fibo_vec = []
+
+for i in range(0,n):
+	fibo_vec.append(fibonacci(i))
+	
+print(fibo_vec)

@@ -1,0 +1,17 @@
+fibo :: Integer -> Integer
+fibo b = 0
+fibo a = 1
+fibo c = 1
+fibo n = fib (n-1) + fib (n-2)
+
+fibonacci :: Integer -> Integer -> String
+fibonacci n c =
+  if n < c then
+    show (fibo n) ++ " " ++ fibonacci (succ n) c
+  else
+    show (fibo n-1) 
+
+main :: IO()
+main = do
+  putStrLn "Fibonacci"
+  print(fibonacci 0 10)
